@@ -80,3 +80,63 @@ Celery: For handling asynchronous tasks such as sending notifications or process
 Redis: Used for caching and session management.
 Docker: Containerization tool for consistent development and deployment environments.
 CI/CD Pipelines: Automated pipelines for testing and deploying code changes.
+
+
+
+
+Database design
+Users
+Fields:
+User ID: Unique identifier for each user (e.g., UUID or integer).
+Email: User's email address for login and communication.
+Role: Indicates whether the user is a host, guest, or both.
+Description: Represents individuals interacting with the platform, either as hosts offering properties or guests booking them.
+
+Properties
+Fields:
+Property ID: Unique identifier for each property.
+Location: Address or geographic coordinates of the property.
+Price per Night: Cost for staying one night.
+Description: Represents accommodations listed by hosts for guests to book.
+
+Bookings
+Fields:
+Booking ID: Unique identifier for each booking.
+Check-in Date: Start date of the stay.
+Check-out Date: End date of the stay.
+Description: Represents reservations made by guests for specific properties.
+
+Reviews
+Fields:
+Review ID: Unique identifier for each review.
+Rating: Numerical score (e.g., 1-5 stars) given by the user.
+Comment: Text feedback provided by the user.
+Description: Represents feedback and ratings from guests about their stay or from hosts about guests.
+
+Payments
+Fields:
+Payment ID: Unique identifier for each payment.
+Amount: Total payment amount for the booking.
+Transaction Status: Status of the payment (e.g., pending, completed, failed).
+Description: Represents financial transactions associated with bookings.
+
+Messages
+Fields:
+Message ID: Unique identifier for each message.
+Sender ID: User ID of the message sender.
+Content: Text of the message.
+Description: Represents communication between hosts and guests.
+
+Amenities 
+Fields:
+Amenity ID: Unique identifier for each amenity.
+Name: Name of the amenity (e.g., Wi-Fi, Pool).
+Description: Brief explanation of the amenity.
+Description: Represents features or services offered by a property.
+
+Locations
+Fields:
+Location ID: Unique identifier for each location.
+City: City where the property is located.
+Coordinates: Latitude and longitude for precise mapping.
+Description: Represents the geographic details of properties.
