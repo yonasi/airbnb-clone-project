@@ -84,7 +84,7 @@ CI/CD Pipelines: Automated pipelines for testing and deploying code changes.
 
 
 
-Database design
+Database Design
 Users
 Fields:
 User ID: Unique identifier for each user (e.g., UUID or integer).
